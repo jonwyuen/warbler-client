@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import SignUpForm from "./SignUpForm";
 import LogInForm from "./LogInForm";
 import Home from "./Home";
+import axios from "axios";
 
 class Main extends Component {
   constructor(props) {
@@ -28,7 +29,7 @@ class Main extends Component {
             )}
           />
           <Route exact path="/login" component={LogInForm} />
-          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
         </Switch>
       </main>
     );

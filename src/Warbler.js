@@ -8,7 +8,7 @@ class Warbler extends Component {
         <div className="warbler-info">
           <span>{this.props.username}</span>
           <span>@{this.props.username}</span>
-          <span>1hr</span>
+          <span>{this.props.timeFromNow}</span>
         </div>
         <div className="warbler-message">
           <p>{this.props.message}</p>
