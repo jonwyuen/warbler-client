@@ -12,8 +12,8 @@ class Main extends Component {
   }
 
   handleSubmit(user) {
-    axios.post("http://localhost:3005/users", { ...user }).then(v => {
-      //do some stuff
+    axios.post("http://localhost:3005/users", user).then(v => {
+      console.log(v);
     });
   }
 

@@ -24,6 +24,12 @@ class SignUpForm extends Component {
     e.preventDefault();
     let newUser = { ...this.state };
     this.props.handleSubmit(newUser);
+    this.setState({
+      email: "",
+      username: "",
+      name: "",
+      password: ""
+    });
   }
 
   render() {
@@ -69,7 +75,7 @@ class SignUpForm extends Component {
               value={this.state.password}
             />
           </div>
-          <button value="">Sign Up</button>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Warbler from "./Warbler";
+import WarblerForm from "./WarblerForm";
 import axios from "axios";
 import { setAuthorizationToken } from "./setAuthorizationToken";
 import moment from "moment";
@@ -32,7 +33,6 @@ class WarblerContainer extends Component {
     //       console.log(v);
     //     });
     // }
-    console.log(moment().format("MMMM Do YYYY, h:mm:ss a"));
     axios.get("http://localhost:3005/warblers").then(v => {
       let warblers = v.data.map(w => {
         return {
@@ -90,7 +90,12 @@ class WarblerContainer extends Component {
       />
     ));
 
-    return <div className="warbler-list">{warblers}</div>;
+    return (
+      <div>
+        <WarblerForm />
+        <div className="warbler-list">{warblers}</div>
+      </div>
+    );
   }
 }
 
