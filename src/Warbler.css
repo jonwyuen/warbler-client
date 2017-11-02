@@ -1,8 +1,9 @@
 .warbler-wrapper {
-  width: 40%;
+  width: 30%;
   height: 40%;
   border: 1px solid black;
-  margin: 0 auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .warbler-wrapper span {

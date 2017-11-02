@@ -4,5 +4,8 @@
 
 .warbler-list {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px;
 }
-

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Profile from "./Profile";
 import ProfileContainer from "./ProfileContainer";
 import WarblerContainer from "./WarblerContainer";
-import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import axios from "axios";
 
 class Home extends Component {
@@ -13,10 +13,8 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Switch>
-          <Route path="/profile" component={ProfileContainer} />
-          <Route path="/warblers" component={WarblerContainer} />
-        </Switch>
+        <Route exact path="/profile" component={ProfileContainer} />
+        <WarblerContainer />
       </div>
     );
   }

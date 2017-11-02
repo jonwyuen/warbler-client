@@ -4,7 +4,7 @@ import "./Warbler.css";
 class Warbler extends Component {
   render() {
     return (
-      <div>
+      <div className="warbler-wrapper">
         <div className="warbler-info">
           <span>{this.props.username}</span>
           <span>@{this.props.username}</span>
