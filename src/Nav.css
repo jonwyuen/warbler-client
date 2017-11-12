@@ -1,19 +1,53 @@
-.nav-container {
+.nav-bar-container {
   width: 100%;
-  height: 100px;
-  background-color: black;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
 }
 
-.nav-title {
+.nav-bar {
+  background-color: lightblue;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin: 0px auto;
+}
+
+.logo {
+  height: 80px;
+  width: 100px;
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+.logo-container {
+  width: 10vw;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.nav-button-container {
+  width: 15vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-button {
+  background: transparent;
   color: white;
-  margin: 0 auto;
-  text-align: center;
+  border-radius: 20px;
+  padding: 7px 10px 7px 10px;
+  font-size: 14px;
+  border: 1px solid white;
+  cursor: pointer;
 }
 
-.navbar-brand > img {
-  display: inline-block;
-  margin-right: 10px;
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
+.nav-button:hover {
+  color: #84c3ed;
 }

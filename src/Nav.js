@@ -5,31 +5,47 @@ import "./Nav.css";
 class Nav extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      currentUser: false
+    };
   }
 
   render() {
+    // const authButtons = (
+    //   <div>
+    //     <Link>
+    //       <button>Username</button>
+    //     </Link>
+    //     <Link>
+    //       <button>Log Out</button>
+    //     </Link>
+    //   </div>
+    // );
+
+    const noAuthButtons = (
+      <div className="nav-button-container">
+        <Link to="/signup">
+          <button className="nav-button">Sign Up</button>
+        </Link>
+        <Link to="/login">
+          <button className="nav-button">Log In</button>
+        </Link>
+      </div>
+    );
+    // const navButtons = this.state.currentUser ? authButtons : noAuthButtons;
+
     return (
-      <nav className="navbar navbar-default">
-        <div className="container-fluid">
-          <div className="navbar-header">
-            <Link to="/" className="navbar-brand">
-              <img
-                src="http://www.dl-digital.com/images/Birds/DD2_7688-fuzzy-titmouse.jpg"
-                alt="Warbler Home"
-              />
-              <span>Warbler</span>
+      <div className="nav-bar-container">
+        <div className="nav-bar">
+          <div className="logo-container">
+            <Link to="/">
+              <img className="logo" src="/svg/warbler-logo.svg" />
             </Link>
           </div>
-          <ul className="nav navbar-nav navbar-right">
-            <li>
-              <Link to="/signup">Sign up</Link>
-            </li>
-            <li>
-              <Link to="/signin">Log in</Link>
-            </li>
-          </ul>
+          {noAuthButtons}
         </div>
-      </nav>
+      </div>
     );
   }
 }
