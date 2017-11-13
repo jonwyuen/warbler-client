@@ -14,7 +14,7 @@ class Warble extends Component {
             />
           </span>
           <span>{this.props.username}</span>
-          <span>@{this.props.username}</span>
+          <div>@{this.props.username}</div>
           <span>{this.props.timeFromNow}</span>
         </div>
         <div className="warble-message">

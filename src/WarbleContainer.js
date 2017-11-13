@@ -32,6 +32,24 @@ class WarbleContainer extends Component {
     //       console.log(v);
     //     });
     // }
+
+    moment.updateLocale("en", {
+      relativeTime: {
+        s: "1s",
+        ss: "%ds",
+        m: "1m",
+        mm: "%dm",
+        h: "1h",
+        hh: "%dh",
+        d: "1d",
+        dd: "%dd",
+        M: "1m",
+        MM: "%dm",
+        y: "1y",
+        yy: "%dy"
+      }
+    });
+
     axios.get("http://localhost:3001/api/warbles").then(v => {
       let warbles = v.data.map(w => {
         return {
@@ -39,7 +57,7 @@ class WarbleContainer extends Component {
           message: w.message,
           username: w.userId.username,
           profileImage: w.userId.profileImage,
-          timeFromNow: moment(w.createdAt).fromNow()
+          createdAt: w.createdAt
         };
       });
       this.setState({ warbles });
@@ -87,7 +105,7 @@ class WarbleContainer extends Component {
         username={w.username}
         message={w.message}
         profileImage={w.profileImage}
-        timeFromNow={w.timeFromNow}
+        timeFromNow={moment(w.createdAt).fromNow(true)}
       />
     ));
 
