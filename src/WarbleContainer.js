@@ -35,18 +35,12 @@ class WarbleContainer extends Component {
 
     moment.updateLocale("en", {
       relativeTime: {
-        s: "1s",
-        ss: "%ds",
-        m: "1m",
-        mm: "%dm",
-        h: "1h",
-        hh: "%dh",
-        d: "1d",
-        dd: "%dd",
-        M: "1m",
-        MM: "%dm",
-        y: "1y",
-        yy: "%dy"
+        s: "%ds",
+        m: "%dm",
+        h: "%dh",
+        d: "%dd",
+        m: "%dm",
+        y: "%dy"
       }
     });
 
@@ -109,11 +103,7 @@ class WarbleContainer extends Component {
       />
     ));
 
-    return (
-      <div className="warble-container">
-        <div className="warble-list">{warbles}</div>
-      </div>
-    );
+    return <div className="warble-container">{warbles}</div>;
   }
 }
 

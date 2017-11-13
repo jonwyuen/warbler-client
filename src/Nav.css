@@ -32,23 +32,26 @@
 }
 
 .nav-button-container {
-  width: 15vw;
-  display: flex;
+  min-width: 15vw;
+  /*  display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: center;*/
 }
 
 .nav-button {
   background: transparent;
+  margin-right: 20px;
   color: white;
   border-radius: 20px;
-  padding: 7px 10px 7px 10px;
+  padding: 8px 16px 8px 16px;
   font-size: 14px;
   border: 1px solid white;
   cursor: pointer;
   outline: none;
+  font-weight: bold;
 }
 
 .nav-button:hover {
   color: #84c3ed;
+  background-color: white;
 }
