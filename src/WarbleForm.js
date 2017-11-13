@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class WarblerForm extends Component {
+class WarbleForm extends Component {
   constructor(props) {
     super(props);
 
@@ -40,4 +40,4 @@ class WarblerForm extends Component {
   }
 }
 
-export default WarblerForm;
+export default WarbleForm;

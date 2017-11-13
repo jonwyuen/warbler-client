@@ -26,10 +26,10 @@ class Nav extends Component {
     const noAuthButtons = (
       <div className="nav-button-container">
         <Link to="/signup">
-          <button className="nav-button">Sign Up</button>
+          <button className="nav-button">Sign up</button>
         </Link>
         <Link to="/login">
-          <button className="nav-button">Log In</button>
+          <button className="nav-button">Log in</button>
         </Link>
       </div>
     );

@@ -46,6 +46,7 @@
   font-size: 14px;
   border: 1px solid white;
   cursor: pointer;
+  outline: none;
 }
 
 .nav-button:hover {

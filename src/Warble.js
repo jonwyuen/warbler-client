@@ -1,19 +1,26 @@
 import React, { Component } from "react";
-import "./Warbler.css";
+import "./Warble.css";
 
-class Warbler extends Component {
+class Warble extends Component {
   render() {
     return (
-      <div className="warbler-wrapper">
-        <div className="warbler-info">
+      <div className="warble-wrapper">
+        <div className="warble-info">
+          <span>
+            <img
+              className="profile-image"
+              src={this.props.profileImage}
+              alt="Profile Image"
+            />
+          </span>
           <span>{this.props.username}</span>
           <span>@{this.props.username}</span>
           <span>{this.props.timeFromNow}</span>
         </div>
-        <div className="warbler-message">
+        <div className="warble-message">
           <p>{this.props.message}</p>
         </div>
-        <div className="warbler-actions">
+        <div className="warble-actions">
           <span>reply</span>
           <span>rewaable</span>
           <span>heart</span>
@@ -24,4 +31,4 @@ class Warbler extends Component {
   }
 }
 
-export default Warbler;
+export default Warble;

@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import Profile from "./Profile";
-import ProfileContainer from "./ProfileContainer";
-import WarblerContainer from "./WarblerContainer";
-import { Route } from "react-router-dom";
-import axios from "axios";
+import WarbleContainer from "./WarbleContainer";
 
 class Home extends Component {
   constructor(props) {
@@ -13,8 +9,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Route exact path="/profile" component={ProfileContainer} />
-        <WarblerContainer />
+        <WarbleContainer />
       </div>
     );
   }

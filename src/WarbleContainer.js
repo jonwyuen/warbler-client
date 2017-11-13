@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import Warbler from "./Warbler";
-import WarblerForm from "./WarblerForm";
+import Warble from "./Warble";
 import axios from "axios";
 import { setAuthorizationToken } from "./setAuthorizationToken";
 import moment from "moment";
 
-class WarblerContainer extends Component {
+class WarbleContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      warblers: []
+      warbles: []
     };
   }
 
@@ -33,16 +32,17 @@ class WarblerContainer extends Component {
     //       console.log(v);
     //     });
     // }
-    axios.get("http://localhost:3005/warblers").then(v => {
-      let warblers = v.data.map(w => {
+    axios.get("http://localhost:3001/api/warbles").then(v => {
+      let warbles = v.data.map(w => {
         return {
-          id: w.id,
+          id: w._id,
           message: w.message,
-          username: w.username,
-          timeFromNow: moment(w.created_at).fromNow()
+          username: w.userId.username,
+          profileImage: w.userId.profileImage,
+          timeFromNow: moment(w.createdAt).fromNow()
         };
       });
-      this.setState({ warblers });
+      this.setState({ warbles });
     });
 
     // axios.get("http://localhost:3005/users/1").then(v => {
@@ -81,22 +81,22 @@ class WarblerContainer extends Component {
   }
 
   render() {
-    let warblers = this.state.warblers.map(w => (
-      <Warbler
+    let warbles = this.state.warbles.map(w => (
+      <Warble
         key={w.id}
         username={w.username}
         message={w.message}
+        profileImage={w.profileImage}
         timeFromNow={w.timeFromNow}
       />
     ));
 
     return (
-      <div>
-        <WarblerForm />
-        <div className="warbler-list">{warblers}</div>
+      <div className="warble-container">
+        <div className="warble-list">{warbles}</div>
       </div>
     );
   }
 }
 
-export default WarblerContainer;
+export default WarbleContainer;
