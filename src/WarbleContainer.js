@@ -35,11 +35,12 @@ class WarbleContainer extends Component {
 
     moment.updateLocale("en", {
       relativeTime: {
-        s: "%ds",
-        m: "%dm",
+        past: "%s ago",
+        ss: "%ds",
+        mm: "%dm",
         h: "%dh",
         d: "%dd",
-        m: "%dm",
+        M: "%dmo",
         y: "%dy"
       }
     });

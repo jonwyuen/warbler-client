@@ -2,25 +2,26 @@
   width: 30px;
   height: 30px;
   border-radius: 20px;
-  margin-top: 10px;
 }
 
 .warble-wrapper {
-  min-width: 300px;
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
   background-color: white;
   border: 0.5px solid lightgray;
-  border-radius: 2px;
-  margin: 20px;
+  border-radius: 5px;
   padding: 15px;
+  cursor: pointer;
 }
 
 .warble-wrapper span {
   margin-right: 10px;
 }
 
-.warble-info span:not(:first-of-type) {
-  position: relative;
-  bottom: 20px;
+.warble-info {
+  display: flex;
+  flex-direction: row;
 }
 
 .warble-info span:nth-of-type(2) {
@@ -31,11 +32,11 @@
   margin-left: 40px;
   color: gray;
   position: relative;
-  bottom: 16px;
+  bottom: 15px;
 }
 
 .warble-time {
-  margin-left: 140px;
+  margin-left: auto;
   color: gray;
 }
 
