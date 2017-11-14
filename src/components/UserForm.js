@@ -38,9 +38,10 @@ class UserForm extends Component {
     if (location === "signup") {
       return (
         <div className="form-container">
+          <h3>Welcome to Warbler</h3>
           <form onSubmit={this.handleSubmit}>
             <div className="form-field">
-              <label>Email</label>
+              <label>Email: </label>
               <input
                 type="text"
                 onChange={this.handleChange}
@@ -50,7 +51,7 @@ class UserForm extends Component {
             </div>
 
             <div className="form-field">
-              <label>Username</label>
+              <label>Username: </label>
               <input
                 type="text"
                 onChange={this.handleChange}
@@ -60,17 +61,7 @@ class UserForm extends Component {
             </div>
 
             <div className="form-field">
-              <label>Name</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="name"
-                value={this.state.name}
-              />
-            </div>
-
-            <div className="form-field">
-              <label>Password</label>
+              <label>Password: </label>
               <input
                 type="password"
                 onChange={this.handleChange}
@@ -78,16 +69,31 @@ class UserForm extends Component {
                 value={this.state.password}
               />
             </div>
-            <button type="submit">Sign Up</button>
+
+            <div className="form-field">
+              <label>Profile Image: </label>
+              <input
+                type="text"
+                onChange={this.handleChange}
+                name="profileImage"
+                value={this.state.profileImage}
+              />
+            </div>
+            <div style={{ textAlign: "center" }}>
+              <button className="form-button" type="submit">
+                Sign up
+              </button>
+            </div>
           </form>
         </div>
       );
     } else
       return (
         <div className="form-container">
+          <h3>It's Warbler Time</h3>
           <form onSubmit={this.handleLogin}>
             <div className="form-field">
-              <label>Username</label>
+              <label>Username: </label>
               <input
                 type="text"
                 onChange={this.handleChange}
@@ -97,7 +103,7 @@ class UserForm extends Component {
             </div>
 
             <div className="form-field">
-              <label>Password</label>
+              <label>Password: </label>
               <input
                 type="password"
                 onChange={this.handleChange}
@@ -105,7 +111,11 @@ class UserForm extends Component {
                 value={this.state.password}
               />
             </div>
-            <button value="">Login</button>
+            <div style={{ textAlign: "center" }}>
+              <button className="form-button" type="submit">
+                Log in
+              </button>
+            </div>
           </form>
         </div>
       );
