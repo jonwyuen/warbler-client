@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import SignUpForm from "../components/SignUpForm";
-import LogInForm from "../components/LogInForm";
+import UserForm from "../components/UserForm";
 import Home from "./Home";
 import axios from "axios";
 
@@ -25,11 +24,11 @@ class Main extends Component {
             exact
             path="/signup"
             render={props => (
-              <SignUpForm handleSubmit={this.handleSubmit} {...props} />
+              <UserForm handleSubmit={this.handleSubmit} {...props} />
             )}
           />
-          <Route exact path="/login" component={LogInForm} />
-          <Route path="/" component={Home} />
+          <Route exact path="/login" component={UserForm} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </main>
     );
