@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import SignUpForm from "./SignUpForm";
-import LogInForm from "./LogInForm";
+import SignUpForm from "../components/SignUpForm";
+import LogInForm from "../components/LogInForm";
 import Home from "./Home";
 import axios from "axios";
 

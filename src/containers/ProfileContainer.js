@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Profile from "./Profile";
+import Profile from "../components/Profile";
 import WarblerContainer from "./WarblerContainer";
 import axios from "axios";
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Warble from "./Warble";
+import Warble from "../components/Warble";
 import axios from "axios";
-import { setAuthorizationToken } from "./setAuthorizationToken";
+import { setAuthorizationToken } from "../setAuthorizationToken";
 import moment from "moment";
 
 class WarbleContainer extends Component {
@@ -14,34 +14,15 @@ class WarbleContainer extends Component {
   }
 
   componentDidMount() {
-    // axios
-    //   .post("http://localhost:3000/users", {
-    //     email: "hello@hello.com",
-    //     username: "hello",
-    //     name: "hello",
-    //     password: "hello"
-    //   })
-    //   .then(v => {
-    //     console.log(v);
-    //   });
-    //   axios
-    //     .post("http://localhost:3005/warblers/1", {
-    //       message: "test msg"
-    //     })
-    //     .then(v => {
-    //       console.log(v);
-    //     });
-    // }
-
     moment.updateLocale("en", {
       relativeTime: {
         past: "%s ago",
         ss: "%ds",
         mm: "%dm",
-        h: "%dh",
-        d: "%dd",
-        M: "%dmo",
-        y: "%dy"
+        hh: "%dh",
+        dd: "%dd",
+        MM: "%dmo",
+        yy: "%dy"
       }
     });
 
@@ -57,19 +38,6 @@ class WarbleContainer extends Component {
       });
       this.setState({ warbles });
     });
-
-    // axios.get("http://localhost:3005/users/1").then(v => {
-    //   let userWarblers = v.data.messages.map(w => {
-    //     return {
-    //       username: v.data.username,
-    //       message: w.message
-    //     };
-    //   });
-    //   let warblers = [...this.state.warblers, ...userWarblers];
-    //   this.setState({
-    //     warblers
-    //   });
-    // });
 
     // Create token and store in localStorage
     // axios
