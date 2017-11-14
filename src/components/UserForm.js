@@ -22,8 +22,9 @@ class UserForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let newUser = { ...this.state };
-    this.props.handleSubmit(newUser);
+    const user = { ...this.state };
+    const authType = this.props.location.pathname.slice(1);
+    this.props.handleSubmit(user, authType);
     this.setState({
       email: "",
       username: "",
@@ -38,7 +39,7 @@ class UserForm extends Component {
     if (location === "signup") {
       return (
         <div className="form-container">
-          <h3>Welcome to Warbler</h3>
+          <h2>Welcome to Warbler</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="form-field">
               <label>Email: </label>
@@ -90,8 +91,8 @@ class UserForm extends Component {
     } else
       return (
         <div className="form-container">
-          <h3>It's Warbler Time</h3>
-          <form onSubmit={this.handleLogin}>
+          <h2>It's Warbler Time</h2>
+          <form onSubmit={this.handleSubmit}>
             <div className="form-field">
               <label>Username: </label>
               <input

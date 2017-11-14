@@ -1,14 +1,15 @@
 .form-container {
   margin: 0 auto;
   margin-top: 100px;
-  width: 35%;
-  border: 1px solid #84c3ed;
+  width: 70vh;
+  border: 1px solid lightgray;
   border-radius: 10px;
   background-color: white;
 }
 
-.form-container > h3 {
+.form-container > h2 {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .form-field {
@@ -17,9 +18,18 @@
 }
 
 .form-field > input {
-  width: 40%;
+  width: 20vh;
+  padding: 5px;
   margin-left: 5px;
-  height: 15px;
+  height: 2vh;
+  font-size: 14px;
+  border: none;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-field > input:focus {
+  outline: none;
 }
 
 .form-button {
