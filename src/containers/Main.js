@@ -14,7 +14,6 @@ class Main extends Component {
     axios
       .post(`http://localhost:3001/api/auth/${authType}`, user)
       .then(res => {
-        const token = res.data.token;
         const warblerUser = {
           token: res.data.token,
           userId: res.data.userId,

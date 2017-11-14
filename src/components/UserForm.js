@@ -8,7 +8,7 @@ class UserForm extends Component {
       email: "",
       username: "",
       password: "",
-      profileImage: ""
+      profileImage: undefined
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,7 +29,7 @@ class UserForm extends Component {
       email: "",
       username: "",
       password: "",
-      profileImage: ""
+      profileImage: undefined
     });
   }
 
