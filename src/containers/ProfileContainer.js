@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Profile from "../components/Profile";
-import WarblerContainer from "./WarblerContainer";
+// import WarblerContainer from "../containers/WarblerContainer";
 import axios from "axios";
 
 class ProfileContainer extends Component {
@@ -34,7 +34,6 @@ class ProfileContainer extends Component {
           name={this.state.user.name}
           warblercount={this.state.user.warblercount}
         />
-        <WarblerContainer />
       </div>
     );
   }

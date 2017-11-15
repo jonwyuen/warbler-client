@@ -1,27 +1,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import * as userActions from "../userHelpers";
+import UserDropdown from "./UserDropdown";
 import "./Nav.css";
 
 class Nav extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      currentUser: false
-    };
   }
 
   render() {
-    // const authButtons = (
-    //   <div>
-    //     <Link>
-    //       <button>Username</button>
-    //     </Link>
-    //     <Link>
-    //       <button>Log Out</button>
-    //     </Link>
-    //   </div>
-    // );
+    const currentUser = userActions.getCurrentUser();
+
+    const authButtons = (
+      <div>
+        <UserDropdown currentUser={currentUser} />
+      </div>
+    );
 
     const noAuthButtons = (
       <div className="nav-button-container">
@@ -33,7 +28,7 @@ class Nav extends Component {
         </Link>
       </div>
     );
-    // const navButtons = this.state.currentUser ? authButtons : noAuthButtons;
+    const navButtons = currentUser ? authButtons : noAuthButtons;
 
     return (
       <div className="nav-bar-container">
@@ -43,7 +38,7 @@ class Nav extends Component {
               <img className="logo" src="/svg/warbler-logo.svg" />
             </Link>
           </div>
-          {noAuthButtons}
+          {navButtons}
         </div>
       </div>
     );

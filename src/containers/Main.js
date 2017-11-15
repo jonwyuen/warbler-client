@@ -3,6 +3,7 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import UserForm from "../components/UserForm";
 import ProfileContainer from "./ProfileContainer";
 import Home from "./Home";
+import * as userActions from "../userHelpers";
 import axios from "axios";
 
 class Main extends Component {
@@ -21,7 +22,7 @@ class Main extends Component {
           username: res.data.username,
           profileImage: res.data.profileImage
         };
-        localStorage.setItem("warblerUser", JSON.stringify(warblerUser));
+        userActions.setCurrentUser(warblerUser);
         this.props.history.push("/");
       })
       .catch(err => {
