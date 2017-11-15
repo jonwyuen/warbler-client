@@ -26,7 +26,7 @@
   margin-left: 40px;
   color: gray;
   position: relative;
-  bottom: 15px;
+  bottom: 14px;
 }
 
 .warble-time {
@@ -35,7 +35,7 @@
 }
 
 .warble-message {
-  margin-top: -15px;
+  margin-top: -10px;
   overflow-wrap: break-word;
 }
 
