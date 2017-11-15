@@ -15,10 +15,14 @@ class Warble extends Component {
               alt="Profile Image"
             />
           </span>
-          <span>{this.props.username}</span>
+          <span className="warble-username">
+            <Link to={`/${this.props.username}`}>{this.props.username}</Link>
+          </span>
           <span className="warble-time">{this.props.timeFromNow}</span>
         </div>
-        <div className="warble-handle">@{this.props.username}</div>
+        <div className="warble-handle">
+          <Link to={`/${this.props.username}`}>@{this.props.username}</Link>
+        </div>
         <div className="warble-message">
           <p>{this.props.message}</p>
         </div>
