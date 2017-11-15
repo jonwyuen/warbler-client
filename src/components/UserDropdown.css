@@ -8,7 +8,7 @@
 }
 
 #user-dropdown span {
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 #user-dropdown:hover {
@@ -22,4 +22,10 @@
 .dropdown-item .dropdown-link {
   color: black;
   text-decoration: none;
+}
+
+.dropdown-menu {
+  width: 150px;
+  font-size: 16px;
+  background-color: lightblue;
 }

@@ -24,16 +24,15 @@ class UserDropdown extends Component {
         id="user-dropdown"
         pullRight={true}
         bsSize="large"
-        noCaret
         title={
-          <div>
+          <span>
             <img
               className="profile-image"
               src={`${this.props.currentUser.profileImage}`}
               alt=""
             />
             <span>{`${this.props.currentUser.username}`}</span>
-          </div>
+          </span>
         }
       >
         <LinkContainer to={`${this.props.currentUser.username}`}>
