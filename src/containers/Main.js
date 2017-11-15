@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import UserForm from "../components/UserForm";
+import ProfileContainer from "./ProfileContainer";
 import Home from "./Home";
 import axios from "axios";
 
@@ -47,6 +48,7 @@ class Main extends Component {
             )}
           />
           <Route exact path="/" component={Home} />
+          <Route exact path="/:username" component={ProfileContainer} />
         </Switch>
       </main>
     );
