@@ -1,8 +1,9 @@
 .profile-wrapper {
   width: 40%;
   height: 40%;
-  border: 2px solid black;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 100px;
   margin-bottom: 20px;
 }

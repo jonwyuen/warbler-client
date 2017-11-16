@@ -8,22 +8,34 @@ class ProfileContainer extends Component {
     super(props);
 
     this.state = {
-      user: {}
+      user: {
+        username: "",
+        profileImage: "",
+        warbles: []
+      }
     };
+    this.getUserInfo = this.getUserInfo.bind(this);
+  }
+
+  getUserInfo(username) {
+    axios.get(`http://localhost:3001/api/public/${username}`).then(v => {
+      let user = {
+        username: v.data.username,
+        profileImage: v.data.profileImage,
+        warbles: v.data.warbles
+      };
+      this.setState({
+        user
+      });
+    });
   }
 
   componentDidMount() {
-    // axios.get("http://localhost:3005/users/1").then(v => {
-    //   let user = {
-    //     ...this.state.user,
-    //     username: v.data.username,
-    //     name: v.data.name,
-    //     warblercount: v.data.messages.length
-    //   };
-    //   this.setState({
-    //     user
-    //   });
-    // });
+    this.getUserInfo(this.props.match.params.username);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.getUserInfo(nextProps.match.params.username);
   }
 
   render() {
@@ -31,8 +43,8 @@ class ProfileContainer extends Component {
       <div className="profile-container">
         <Profile
           username={this.state.user.username}
-          name={this.state.user.name}
-          warblercount={this.state.user.warblercount}
+          profileImage={this.state.user.profileImage}
+          warbles={this.state.user.warbles}
         />
       </div>
     );

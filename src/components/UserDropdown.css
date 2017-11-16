@@ -12,16 +12,19 @@
 }
 
 #user-dropdown:hover {
-  opacity: 0.7;
-}
-
-#user-dropdown:focus {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .dropdown-item .dropdown-link {
   color: black;
   text-decoration: none;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover {
+  background-color: white;
+  color: lightblue;
 }
 
 .dropdown-menu {

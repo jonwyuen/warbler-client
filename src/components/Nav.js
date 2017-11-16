@@ -20,9 +20,7 @@ class Nav extends Component {
     const currentUser = getCurrentUser();
     const authButtons = (
       <div>
-        <span>
-          <button className="nav-button">Warble</button>
-        </span>
+        <button className="nav-button">Warble</button>
         <UserDropdown currentUser={currentUser} logout={this.handleLogout} />
       </div>
     );
