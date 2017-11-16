@@ -11,6 +11,22 @@ class WarbleContainer extends Component {
     this.state = {
       warbles: []
     };
+    this.getWarbles = this.getWarbles.bind(this);
+  }
+
+  getWarbles() {
+    axios.get("http://localhost:3001/api/warbles").then(v => {
+      let warbles = v.data.map(w => {
+        return {
+          id: w._id,
+          message: w.message,
+          username: w.userId.username,
+          profileImage: w.userId.profileImage,
+          createdAt: w.createdAt
+        };
+      });
+      this.setState({ warbles });
+    });
   }
 
   componentDidMount() {
@@ -32,18 +48,7 @@ class WarbleContainer extends Component {
       }
     });
 
-    axios.get("http://localhost:3001/api/warbles").then(v => {
-      let warbles = v.data.map(w => {
-        return {
-          id: w._id,
-          message: w.message,
-          username: w.userId.username,
-          profileImage: w.userId.profileImage,
-          createdAt: w.createdAt
-        };
-      });
-      this.setState({ warbles });
-    });
+    this.getWarbles();
 
     // Create token and store in localStorage
     // axios
