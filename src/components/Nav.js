@@ -1,20 +1,26 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import * as userActions from "../userHelpers";
+import { Link, withRouter } from "react-router-dom";
+import { getCurrentUser, logoutCurrentUser } from "../userHelpers";
 import UserDropdown from "./UserDropdown";
 import "./Nav.css";
 
 class Nav extends Component {
   constructor(props) {
     super(props);
+
+    this.handleLogout = this.handleLogout.bind(this);
+  }
+
+  handleLogout() {
+    logoutCurrentUser();
+    this.props.history.push("/");
   }
 
   render() {
-    const { getCurrentUser, logoutCurrentUser } = userActions;
     const currentUser = getCurrentUser();
     const authButtons = (
       <div>
-        <UserDropdown currentUser={currentUser} logout={logoutCurrentUser} />
+        <UserDropdown currentUser={currentUser} logout={this.handleLogout} />
       </div>
     );
 
@@ -45,4 +51,4 @@ class Nav extends Component {
   }
 }
 
-export default Nav;
+export default withRouter(Nav);
