@@ -10,11 +10,11 @@ class Nav extends Component {
   }
 
   render() {
-    const currentUser = userActions.getCurrentUser();
-
+    const { getCurrentUser, logoutCurrentUser } = userActions;
+    const currentUser = getCurrentUser();
     const authButtons = (
       <div>
-        <UserDropdown currentUser={currentUser} />
+        <UserDropdown currentUser={currentUser} logout={logoutCurrentUser} />
       </div>
     );
 

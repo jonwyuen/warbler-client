@@ -18,10 +18,10 @@
 }
 
 .form-field > input {
-  width: 20vh;
+  width: 175px;
   padding: 5px;
   margin-left: 5px;
-  height: 2vh;
+  height: 25px;
   font-size: 14px;
   border: none;
   border: 1px solid #ccc;

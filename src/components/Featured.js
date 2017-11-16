@@ -30,28 +30,29 @@ class Featured extends Component {
   }
 
   componentDidMount() {
-    moment.updateLocale("en", {
+    this.getWarbles();
+  }
+
+  render() {
+    moment.locale("en", {
       relativeTime: {
+        future: "in %s",
         past: "%s ago",
-        s: "1d",
-        ss: "%ds",
+        s: "1s",
+        ss: "%ss",
         m: "1m",
         mm: "%dm",
         h: "1h",
         hh: "%dh",
         d: "1d",
         dd: "%dd",
-        M: "1mo",
-        MM: "%dmo",
-        y: "1y",
-        yy: "%dy"
+        M: "1M",
+        MM: "%dM",
+        y: "1Y",
+        yy: "%dY"
       }
     });
 
-    this.getWarbles();
-  }
-
-  render() {
     const [left, middle, right] = this.state.warbles.reduce(
       (c, w, i) => {
         c[i % 3].push(
