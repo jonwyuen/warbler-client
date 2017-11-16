@@ -17,14 +17,10 @@
 }
 
 .logo {
-  height: 80px;
-  width: 100px;
+  height: 90px;
+  width: 110px;
   padding-top: 10px;
   padding-right: 10px;
-}
-
-.logo-container {
-  width: 10vw;
 }
 
 .logo:hover {

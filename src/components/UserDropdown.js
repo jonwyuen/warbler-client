@@ -40,7 +40,9 @@ class UserDropdown extends Component {
         </LinkContainer>
         <MenuItem href="#">Edit account</MenuItem>
         <MenuItem href="#">Update password</MenuItem>
-        <MenuItem onClick={this.props.logout}>Log out</MenuItem>
+        <MenuItem href="javascript:void(0)" onClick={this.props.logout}>
+          Log out
+        </MenuItem>
       </DropdownButton>
     );
   }

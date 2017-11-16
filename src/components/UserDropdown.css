@@ -12,11 +12,11 @@
 }
 
 #user-dropdown:hover {
-  background-color: lightgray;
+  opacity: 0.7;
 }
 
 #user-dropdown:focus {
-  background-color: lightgray;
+  opacity: 0.7;
 }
 
 .dropdown-item .dropdown-link {
