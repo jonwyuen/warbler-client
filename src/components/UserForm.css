@@ -1,10 +1,12 @@
 .form-container {
   margin: 0 auto;
   margin-top: 100px;
-  width: 70vh;
+  width: 35vw;
   border: 1px solid lightgray;
   border-radius: 10px;
   background-color: white;
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .form-container > h2 {
@@ -18,10 +20,10 @@
 }
 
 .form-field > input {
-  width: 175px;
+  width: 15vw;
   padding: 5px;
   margin-left: 5px;
-  height: 25px;
+  height: 30px;
   font-size: 14px;
   border: none;
   border: 1px solid #ccc;
@@ -34,7 +36,7 @@
 
 .form-button {
   background: white;
-  margin-bottom: 10px;
+  margin: 15px;
   color: #84c3ed;
   border-radius: 20px;
   padding: 8px 16px 8px 16px;
