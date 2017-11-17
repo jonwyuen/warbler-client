@@ -5,17 +5,14 @@ class ProfileCard extends Component {
   render() {
     return (
       <div className="profile-wrapper">
-        <div className="profile-card-section">
+        <div className="profile-card-top">
           <img src={this.props.profileImage} alt="Profile Image" />
+          <span>{this.props.username}</span>
         </div>
-        <div className="profile-card-section">
-          <p>{this.props.username}</p>
-        </div>
-        <div className="profile-card-section">
-          <p>@{this.props.username}</p>
-        </div>
-        <div className="profile-card-section">
-          <p>{this.props.warbles.length} warbles</p>
+        <div>@{this.props.username}</div>
+        <div className="profile-card-bottom">
+          <p>Warbles</p>
+          <p>{this.props.warbles.length}</p>
         </div>
       </div>
     );

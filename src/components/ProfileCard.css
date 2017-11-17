@@ -1,18 +1,25 @@
 .profile-wrapper {
-  width: 40%;
-  height: 40%;
-  border: 1px solid lightgrey;
+  width: 30%;
+  border: 0.5px solid lightgrey;
   background-color: white;
   border-radius: 3px;
   margin-top: 100px;
   margin-bottom: 20px;
 }
 
-.profile-card-section {
+.profile-card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 18px;
 }
 
-.profile-card-section > img {
+.profile-card-top > img {
   border-radius: 100px;
   height: 80px;
   width: 80px;
+}
+
+.profile-card-bottom {
+  margin-left: 20px;
 }

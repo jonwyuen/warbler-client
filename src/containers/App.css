@@ -11,6 +11,10 @@
 .profile-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 30px;
 }
 
 .profile-image {
