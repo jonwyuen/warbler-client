@@ -33,6 +33,10 @@ class Featured extends Component {
     this.getWarbles();
   }
 
+  componentWillReceiveProps() {
+    this.getWarbles();
+  }
+
   render() {
     moment.locale("en", {
       relativeTime: {

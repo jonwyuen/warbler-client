@@ -8,6 +8,11 @@
   font-size: 14px;
 }
 
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .profile-image {
   width: 30px;
   height: 30px;

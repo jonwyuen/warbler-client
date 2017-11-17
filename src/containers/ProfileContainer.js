@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Profile from "../components/Profile";
+import ProfileCard from "../components/ProfileCard";
 // import WarblerContainer from "../containers/WarblerContainer";
 import axios from "axios";
 
@@ -41,7 +41,7 @@ class ProfileContainer extends Component {
   render() {
     return (
       <div className="profile-container">
-        <Profile
+        <ProfileCard
           username={this.state.user.username}
           profileImage={this.state.user.profileImage}
           warbles={this.state.user.warbles}
