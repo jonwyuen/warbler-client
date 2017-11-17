@@ -1,18 +1,33 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./ProfileCard.css";
 
 class ProfileCard extends Component {
   render() {
     return (
       <div className="profile-wrapper">
+        <div className="profile-card-banner" />
         <div className="profile-card-top">
           <img src={this.props.profileImage} alt="Profile Image" />
-          <span>{this.props.username}</span>
+          <div className="profile-card-info">
+            <span>
+              <Link to={`/${this.props.username}`}>{this.props.username}</Link>
+            </span>
+            <div>
+              <Link to={`/${this.props.username}`}>@{this.props.username}</Link>
+            </div>
+          </div>
         </div>
-        <div>@{this.props.username}</div>
+
         <div className="profile-card-bottom">
-          <p>Warbles</p>
-          <p>{this.props.warbles.length}</p>
+          <div>
+            <p>Warbles</p>
+            <span>{this.props.warbles.length}</span>
+          </div>
+          <div>
+            <p>Following</p>
+            <span>0</span>
+          </div>
         </div>
       </div>
     );

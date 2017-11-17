@@ -35,19 +35,19 @@
 }
 
 .nav-button {
-  background: transparent;
+  background: #2aa3ef;
   margin-right: 20px;
   color: white;
   border-radius: 20px;
   padding: 8px 16px 8px 16px;
   font-size: 14px;
-  border: 1px solid white;
+  border: 1px solid lightblue;
   cursor: pointer;
   outline: none;
   font-weight: bold;
 }
 
 .nav-button:hover {
-  color: #84c3ed;
+  color: #2aa3ef;
   background-color: white;
 }

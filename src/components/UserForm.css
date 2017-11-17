@@ -35,19 +35,20 @@
 }
 
 .form-button {
-  background: white;
+  background: #2aa3ef;
   margin: 15px;
-  color: #84c3ed;
+  color: white;
   border-radius: 20px;
   padding: 8px 16px 8px 16px;
   font-size: 14px;
-  border: 1px solid #84c3ed;
+  border: 1px solid white;
   cursor: pointer;
   outline: none;
   font-weight: bold;
 }
 
 .form-button:hover {
-  color: white;
-  background-color: #84c3ed;
+  color: #2aa3ef;
+  border: 1px solid #2aa3ef;
+  background-color: white;
 }
