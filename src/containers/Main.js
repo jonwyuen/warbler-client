@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
 import UserForm from "../components/UserForm";
+import WarbleForm from "../components/WarbleForm";
 import ProfileContainer from "./ProfileContainer";
 import Home from "./Home";
 import * as userActions from "../userHelpers";
@@ -10,6 +11,7 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleWarbleSubmit = this.handleWarbleSubmit.bind(this);
   }
 
   handleSubmit(user, authType) {
@@ -30,7 +32,10 @@ class Main extends Component {
       });
   }
 
+  handleWarbleSubmit(message) {}
+
   render() {
+    const currentUser = userActions.getCurrentUser();
     return (
       <main>
         <Switch>
@@ -50,6 +55,17 @@ class Main extends Component {
           />
           <Route exact path="/" component={Home} />
           <Route exact path="/:username" component={ProfileContainer} />
+          <Route
+            exact
+            path="/:username/warbles/new"
+            render={props => (
+              <WarbleForm
+                currentUser={currentUser}
+                handleWarbleSubmit={this.handleWarbleSubmit}
+                {...props}
+              />
+            )}
+          />
         </Switch>
       </main>
     );
