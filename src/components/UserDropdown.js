@@ -35,7 +35,7 @@ class UserDropdown extends Component {
           </span>
         }
       >
-        <LinkContainer to={`/${this.props.currentUser.username}`}>
+        <LinkContainer to={`/${this.props.currentUser.username}`} exact={true}>
           <MenuItem className="dropdown-item">Profile</MenuItem>
         </LinkContainer>
         <MenuItem href="#">Edit account</MenuItem>
